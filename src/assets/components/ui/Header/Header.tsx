@@ -6,6 +6,7 @@ import Portal from '@components/Portal/Portal';
 import UiContainer from '@components/UiContainer/UiContainer';
 
 import Navbar from '@ui/Navbar/Navbar';
+import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 
 import banner from '@media/backgrounds/space.png';
 import logotype from '@media/branding/logo.png';
@@ -22,7 +23,11 @@ const Header: FC<HeaderProps> = ({}) => {
 						<img className={cn(styles.logo)} src={logotype} alt={'logo'} />
 					</Link>
 
-					<Navbar />
+					<MediaWidthView minWidth={1512}>
+						<Navbar />
+					</MediaWidthView>
+
+					<MediaWidthView maxWidth={1511}>Burger menu</MediaWidthView>
 
 					<Link
 						to={'/'}
