@@ -4,9 +4,12 @@ import { FC, PropsWithChildren } from 'react';
 import styles from './UiContainer.module.scss';
 import type { UiContainerProps } from './UiContainer.props';
 
-const UiContainer: FC<PropsWithChildren<UiContainerProps>> & {
-	Section: FC<PropsWithChildren<UiContainerProps>>;
-	Article: FC<PropsWithChildren<UiContainerProps>>;
+interface IUiContainerNestedProps extends PropsWithChildren<UiContainerProps> {}
+
+const UiContainer: FC<IUiContainerNestedProps> & {
+	Section: FC<IUiContainerNestedProps>;
+	Article: FC<IUiContainerNestedProps>;
+	Header: FC<IUiContainerNestedProps>;
 } = ({ children, className }) => {
 	return <div className={cn(styles.container, className)}>{children}</div>;
 };
@@ -16,6 +19,9 @@ UiContainer.Section = ({ children, className }) => (
 );
 UiContainer.Article = ({ children, className }) => (
 	<article className={cn(styles.container, className)}>{children}</article>
+);
+UiContainer.Header = ({ children, className }) => (
+	<header className={cn(styles.container, className)}>{children}</header>
 );
 
 export default UiContainer;
