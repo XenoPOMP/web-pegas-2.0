@@ -1,0 +1,15 @@
+@import "src/assets/styles/templates";
+
+.item {
+  @extend %notSelectable;
+
+  // 1em = 24px
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: .15s ease;
+
+  &:hover {
+    color: #5FA6DA;
+  }
+}

@@ -1,0 +1,26 @@
+@import "src/assets/styles/templates";
+
+header.appHeader {
+  @extend %primaryFont;
+  @extend %regular;
+
+  font-size: 24px;
+  width: 100%;
+  background: linear-gradient(
+                  180deg,
+                  #0D0D0D 76.04%,
+                  rgba(13, 13, 13, 0.19) 100%
+  );
+  color: white;
+  padding: .83em 0;
+
+  .headerContainer {
+    @extend %flexCenter;
+
+    justify-content: space-between;
+
+    img.logo {
+      height: 2.625em;
+    }
+  }
+}
