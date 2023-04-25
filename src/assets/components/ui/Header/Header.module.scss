@@ -270,6 +270,10 @@ header.appHeader {
         font-size: .4em;
         --angle: -6.5deg;
       }
+
+      @media (max-width: 380px) {
+        transform: unset;
+      }
     }
   }
 }
