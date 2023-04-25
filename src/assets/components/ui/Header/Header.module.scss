@@ -57,6 +57,11 @@ header.appHeader {
   background-size: cover;
   z-index: -1;
 
+  --clip-path-height: 91%;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% var(--clip-path-height), 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% var(--clip-path-height), 0% 100%);
+
   @media (max-width: 1369px) {
     font-size: 22px;
   }
@@ -72,6 +77,18 @@ header.appHeader {
 
   @media (max-width: 794px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 690px) {
+    --clip-path-height: 92.5%;
+  }
+
+  @media (max-width: 463px) {
+    --clip-path-height: 95%;
+  }
+
+  @media (max-width: 380px) {
+    --clip-path-height: 100%;
   }
 
   @media (max-width: 585px) {
