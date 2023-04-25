@@ -80,6 +80,29 @@ const Header: FC<HeaderProps> = ({}) => {
 							</div>
 						</div>
 					</div>
+
+					<div className={cn(styles.patch)}>
+						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+
+						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+
+						<MediaWidthView maxWidth={405}>
+							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						</MediaWidthView>
+
+						<MediaWidthView minWidth={644}>
+							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						</MediaWidthView>
+
+						<MediaWidthView minWidth={952}>
+							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						</MediaWidthView>
+
+						<MediaWidthView minWidth={1628}>
+							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						</MediaWidthView>
+					</div>
 				</UiGrid.Section>
 			</div>
 		</>

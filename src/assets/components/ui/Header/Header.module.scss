@@ -50,14 +50,14 @@ header.appHeader {
 }
 
 .banner {
+  --clip-path-height: 91%;
+
   font-size: 24px;
   margin-top: calc(-1 * var(--global-padding));
   width: 100%;
   aspect-ratio: 1920 / 1270;
   background-size: cover;
   z-index: -1;
-
-  --clip-path-height: 91%;
 
   -webkit-clip-path: polygon(0 0, 100% 0, 100% var(--clip-path-height), 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% var(--clip-path-height), 0% 100%);
@@ -100,9 +100,11 @@ header.appHeader {
 
     height: 100%;
     color: white;
+    position: relative;
+    container-type: inline-size;
 
     @media (max-width: 1177px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
 
       .textBlock, .pegasBlock {
         grid-column: span 1;
@@ -117,7 +119,7 @@ header.appHeader {
       flex-direction: column;
 
       @media (max-width: 1177px) {
-        padding-bottom: 3em;
+        margin-bottom: 7.5em;
       }
 
       h2 {
@@ -197,6 +199,76 @@ header.appHeader {
           width: 100%;
           aspect-ratio: 1;
         }
+      }
+    }
+
+    .patch {
+      @extend %flexCenter;
+      $extraWidth: 50%;
+      --angle: -3.407deg;
+
+      justify-content: start;
+      position: absolute;
+      bottom: -0.13em;
+      left: -1.85em * 3;
+      width: 100% + $extraWidth;
+      height: 4.6em;
+      background: black;
+      flex-wrap: nowrap;
+      transform: skewY(var(--angle));
+      transform-origin: left bottom;
+      column-gap: 2.08em;
+      z-index: -2;
+
+      .word {
+        font-size: 2em;
+      }
+
+      @media (max-width: 1343px) {
+        font-size: .75em;
+      }
+
+      @media (max-width: 1177px) {
+        --angle: -5.4deg;
+      }
+
+      @media (max-width: 1020px) {
+        --angle: -5.7deg;
+      }
+
+      @media (max-width: 840px) {
+        --angle: -6deg;
+      }
+
+      @media (max-width: 728px) {
+        --angle: -6.5deg;
+      }
+
+      @media (max-width: 644px) {
+        justify-content: center;
+        width: 125%;
+      }
+
+      @media (max-width: 550px) {
+        --angle: -7deg;
+      }
+
+      @media (max-width: 494px) {
+        --angle: -7.5deg;
+        font-size: .6em;
+      }
+
+      @media (max-width: 463px) {
+        --angle: -5.6deg;
+      }
+
+      @media (max-width: 443px) {
+        --angle: -6deg;
+      }
+
+      @media (max-width: 405px) {
+        font-size: .4em;
+        --angle: -6.5deg;
       }
     }
   }
