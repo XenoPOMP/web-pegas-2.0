@@ -253,6 +253,10 @@ header.appHeader {
         --angle: -7deg;
       }
 
+      @media (max-width: 509px) {
+        font-size: .65em;
+      }
+
       @media (max-width: 494px) {
         --angle: -7.5deg;
         font-size: .6em;
@@ -266,9 +270,13 @@ header.appHeader {
         --angle: -6deg;
       }
 
-      @media (max-width: 405px) {
+      @media (max-width: 419px) {
         font-size: .4em;
         --angle: -6.5deg;
+      }
+
+      @media (max-width: 383px) {
+        font-size: .35em;
       }
 
       @media (max-width: 380px) {

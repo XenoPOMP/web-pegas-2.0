@@ -85,13 +85,15 @@ const Header: FC<HeaderProps> = ({}) => {
 						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
 						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
 
-						<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
-
-						<MediaWidthView maxWidth={405}>
+						<MediaWidthView minWidth={342}>
 							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
 						</MediaWidthView>
 
-						<MediaWidthView minWidth={644}>
+						<MediaWidthView maxWidth={419}>
+							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
+						</MediaWidthView>
+
+						<MediaWidthView minWidth={659}>
 							<div className={cn(styles.word)}>{`</Web Pegas>`}</div>
 						</MediaWidthView>
 
