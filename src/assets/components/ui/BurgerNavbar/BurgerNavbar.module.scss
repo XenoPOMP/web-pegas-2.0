@@ -1,0 +1,32 @@
+@import "src/assets/styles/templates";
+
+.burgerNavbar {
+  // 1em = 24px
+
+  svg {
+    width: 1em;
+    aspect-ratio: 15/10;
+    cursor: pointer;
+  }
+
+  .menuPlaceholder {
+    $width: calc(100% + globalPadding(2));
+    $left: calc(0% - globalPadding(1));
+
+    position: absolute;
+    top: 100%;
+    left: $left;
+    width: $width;
+    overflow: hidden;
+
+    .menu {
+      padding: 1em;
+      background: black;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      row-gap: 1em;
+    }
+  }
+}

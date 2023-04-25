@@ -2,9 +2,9 @@ import cn from 'classnames';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import Portal from '@components/Portal/Portal';
 import UiContainer from '@components/UiContainer/UiContainer';
 
+import BurgerNavbar from '@ui/BurgerNavbar/BurgerNavbar';
 import Navbar from '@ui/Navbar/Navbar';
 import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 
@@ -27,17 +27,21 @@ const Header: FC<HeaderProps> = ({}) => {
 						<Navbar />
 					</MediaWidthView>
 
-					<MediaWidthView maxWidth={1511}>Burger menu</MediaWidthView>
+					<MediaWidthView maxWidth={1511}>
+						<BurgerNavbar />
+					</MediaWidthView>
 
-					<Link
-						to={'/'}
-						style={{
-							opacity: 0,
-							pointerEvents: 'none',
-						}}
-					>
-						<img className={cn(styles.logo)} src={logotype} alt={'logo'} />
-					</Link>
+					<MediaWidthView minWidth={1512}>
+						<Link
+							to={'/'}
+							style={{
+								opacity: 0,
+								pointerEvents: 'none',
+							}}
+						>
+							<img className={cn(styles.logo)} src={logotype} alt={'logo'} />
+						</Link>
+					</MediaWidthView>
 				</UiContainer>
 			</header>
 

@@ -15,15 +15,36 @@ header.appHeader {
   position: relative;
   z-index: 2;
 
+  @media (max-width: 1512px) {
+    background: black;
+  }
+
+  @media (max-width: 598px) {
+    font-size: 20px;
+  }
+
   .headerContainer {
     @extend %flexCenter;
 
     justify-content: space-between;
     padding: .83em 0;
     z-index: inherit;
+    position: relative;
 
     img.logo {
       height: 2.625em;
+
+      @media (max-width: 968px) {
+        height: 1.75em;
+      }
+
+      @media (max-width: 727px) {
+        height: 1.25em;
+      }
+
+      @media (max-width: 598px) {
+        height: 1.5em;
+      }
     }
   }
 }
