@@ -115,6 +115,14 @@ header.appHeader {
             left: calc(-12.6% - 1.08em);
           }
 
+          filter:
+                  drop-shadow(0px 0px 511.812px #FFFFFF)
+                  drop-shadow(0px 0px 292.464px #FFFFFF)
+                  drop-shadow(0px 0px 170.604px #FFFFFF)
+                  drop-shadow(0px 0px 85.302px #FFFFFF)
+                  drop-shadow(0px 0px 24.372px #FFFFFF)
+                  drop-shadow(0px 0px 12.186px #FFFFFF);
+
           justify-content: start;
           align-items: start;
           position: absolute;
