@@ -58,6 +58,8 @@ header.appHeader {
   z-index: -1;
 
   .bannerContainer {
+    @extend %secondaryFont;
+
     height: 100%;
     color: white;
 
@@ -65,11 +67,63 @@ header.appHeader {
       @extend %flexCenter;
 
       grid-column: span 7;
-      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+
+      h2 {
+        @extend %semiBold;
+        font-size: 2.66em;
+        line-height: 1.21875em;
+      }
+
+      .underHeader {
+        @extend %primaryFont;
+
+        font-size: 1em;
+        line-height: 1.21em;
+        margin: 1.25em 0 3.83em 0;
+      }
+
+      .seeMore {
+        @extend %notSelectable;
+
+        font-size: 1.33em;
+        padding: 0.65625em 2.03125em;
+        background: black;
+        border-radius: 0.46875em;
+        cursor: pointer;
+      }
     }
 
     .pegasBlock {
+      @extend %flexCenter;
       grid-column: span 5;
+
+      .circle {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 1.08em solid white;
+        position: relative;
+
+        .pegasPlaceholder {
+          @extend %flexCenter;
+
+          &:has(> img) {
+            aspect-ratio: 1054.74 / 745;
+            top: calc(0% - 1.08em);
+            left: calc(-12.6% - 1.08em);
+          }
+
+          justify-content: start;
+          align-items: start;
+          position: absolute;
+          top: calc(0% - 1.08em);
+          left: calc(0% - 1.08em);
+          width: 175%;
+          aspect-ratio: 1;
+        }
+      }
     }
   }
 }
