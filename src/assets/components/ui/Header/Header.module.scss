@@ -54,8 +54,29 @@ header.appHeader {
   margin-top: calc(-1 * var(--global-padding));
   width: 100%;
   aspect-ratio: 1920 / 1270;
-  background-size: 100%;
+  background-size: cover;
   z-index: -1;
+
+  @media (max-width: 1369px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 1177px) {
+    aspect-ratio: unset;
+    margin-top: unset;
+  }
+
+  @media (max-width: 914px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 794px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 585px) {
+    font-size: 16px;
+  }
 
   .bannerContainer {
     @extend %secondaryFont;
@@ -63,12 +84,24 @@ header.appHeader {
     height: 100%;
     color: white;
 
+    @media (max-width: 1177px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .textBlock, .pegasBlock {
+        grid-column: span 1;
+      }
+    }
+
     .textBlock {
       @extend %flexCenter;
 
       grid-column: span 7;
       align-items: start;
       flex-direction: column;
+
+      @media (max-width: 1177px) {
+        padding-bottom: 3em;
+      }
 
       h2 {
         @extend %semiBold;
@@ -99,12 +132,35 @@ header.appHeader {
       @extend %flexCenter;
       grid-column: span 5;
 
+      @media (max-width: 1177px) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
       .circle {
         width: 100%;
         aspect-ratio: 1;
         border-radius: 50%;
         border: 1.08em solid white;
         position: relative;
+        container-type: inline-size;
+
+        filter:
+                // drop-shadow(0px 0px 75.6cqw #FFFFFF)
+                // drop-shadow(0px 0px 43cqw #FFFFFF)
+                // drop-shadow(0px 0px 25.11cqw #FFFFFF)
+                // drop-shadow(0px 0px 12.6cqw #FFFFFF)
+                drop-shadow(0px 0px 3.6cqw #FFFFFF)
+                drop-shadow(0px 0px 1.8cqw #FFFFFF);
+
+        @media (max-width: 1177px) {
+          width: 50%;
+          margin: 3em auto 3em auto;
+        }
+
+        @media (max-width: 727px) {
+          width: 75%;
+        }
 
         .pegasPlaceholder {
           @extend %flexCenter;
@@ -115,20 +171,12 @@ header.appHeader {
             left: calc(-12.6% - 1.08em);
           }
 
-          filter:
-                  drop-shadow(0px 0px 511.812px #FFFFFF)
-                  drop-shadow(0px 0px 292.464px #FFFFFF)
-                  drop-shadow(0px 0px 170.604px #FFFFFF)
-                  drop-shadow(0px 0px 85.302px #FFFFFF)
-                  drop-shadow(0px 0px 24.372px #FFFFFF)
-                  drop-shadow(0px 0px 12.186px #FFFFFF);
-
           justify-content: start;
           align-items: start;
           position: absolute;
           top: calc(0% - 1.08em);
           left: calc(0% - 1.08em);
-          width: 175%;
+          width: 175cqw;
           aspect-ratio: 1;
         }
       }

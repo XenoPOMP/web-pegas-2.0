@@ -1,4 +1,12 @@
 .sizes {
   --ui-container-max-width: 1680px;
   --global-padding: 40px;
+
+  @media (max-width: 1028px) {
+    --global-padding: 35px;
+  }
+
+  @media (max-width: 593px) {
+    --global-padding: 20px;
+  }
 }
