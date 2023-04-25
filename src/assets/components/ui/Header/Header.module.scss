@@ -186,14 +186,15 @@ header.appHeader {
             aspect-ratio: 1054.74 / 745;
             top: calc(0% - 1.08em);
             left: calc(-12.6% - 1.08em);
+            justify-content: start;
+            align-items: start;
+            width: 175cqw;
           }
 
-          justify-content: start;
-          align-items: start;
           position: absolute;
-          top: calc(0% - 1.08em);
-          left: calc(0% - 1.08em);
-          width: 175cqw;
+          top: calc(0%);
+          left: calc(0%);
+          width: 100%;
           aspect-ratio: 1;
         }
       }
