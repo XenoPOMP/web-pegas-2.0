@@ -7,14 +7,14 @@ import getUiSx from '@utils/getUiSx';
 import styles from './UiGrid.module.scss';
 import type { UiGridProps } from './UiGrid.props';
 
-const UiGrid: FC<PropsWithChildren<unknown>> & {
+const UiGrid: FC<PropsWithChildren<UiGridProps>> & {
 	Section: FC<PropsWithChildren<UiGridProps>>;
 	Article: FC<PropsWithChildren<UiGridProps>>;
-} = ({ children }) => {
-	return <div className={cn(styles.grid)}>{children}</div>;
+} = ({ children, className }) => {
+	return <div className={cn(styles.grid, className)}>{children}</div>;
 };
 
-UiGrid.Section = ({ children, cols, rows, gap, maxWidth }) => (
+UiGrid.Section = ({ children, className, cols, rows, gap, maxWidth }) => (
 	<section
 		style={{
 			...getUiSx({
@@ -24,13 +24,13 @@ UiGrid.Section = ({ children, cols, rows, gap, maxWidth }) => (
 				maxWidth,
 			}),
 		}}
-		className={cn(styles.grid)}
+		className={cn(styles.grid, className)}
 	>
 		{children}
 	</section>
 );
 
-UiGrid.Article = ({ children, cols, rows, gap, maxWidth }) => (
+UiGrid.Article = ({ children, className, cols, rows, gap, maxWidth }) => (
 	<article
 		style={{
 			...getUiSx({
@@ -40,7 +40,7 @@ UiGrid.Article = ({ children, cols, rows, gap, maxWidth }) => (
 				maxWidth,
 			}),
 		}}
-		className={cn(styles.grid)}
+		className={cn(styles.grid, className)}
 	>
 		{children}
 	</article>

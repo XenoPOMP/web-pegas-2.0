@@ -1,3 +1,5 @@
 import { GridSettings } from '@utils/getUiSx';
 
-export interface UiGridProps extends GridSettings {}
+export interface UiGridProps extends GridSettings {
+	className?: string;
+}

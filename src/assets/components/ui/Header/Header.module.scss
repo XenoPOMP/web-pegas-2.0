@@ -56,4 +56,20 @@ header.appHeader {
   aspect-ratio: 1920 / 1270;
   background-size: 100%;
   z-index: -1;
+
+  .bannerContainer {
+    height: 100%;
+    color: white;
+
+    .textBlock {
+      @extend %flexCenter;
+
+      grid-column: span 7;
+      justify-content: start;
+    }
+
+    .pegasBlock {
+      grid-column: span 5;
+    }
+  }
 }

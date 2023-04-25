@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import UiContainer from '@components/UiContainer/UiContainer';
+import UiGrid from '@components/UiGrid/UiGrid';
 
 import BurgerNavbar from '@ui/BurgerNavbar/BurgerNavbar';
 import Navbar from '@ui/Navbar/Navbar';
@@ -51,7 +52,9 @@ const Header: FC<HeaderProps> = ({}) => {
 					background: `url(${banner}) center`,
 				}}
 			>
-				<UiContainer>12</UiContainer>
+				<UiGrid.Section className={cn(styles.bannerContainer)}>
+					<div className={cn(styles.textBlock)}>1</div>
+				</UiGrid.Section>
 			</div>
 		</>
 	);
