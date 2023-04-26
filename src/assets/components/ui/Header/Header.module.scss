@@ -157,12 +157,15 @@ header.appHeader {
       }
 
       .circle {
+        @extend %notSelectable;
+
         width: 100%;
         aspect-ratio: 1;
         border-radius: 50%;
         border: 1.08em solid white;
         position: relative;
         container-type: inline-size;
+        pointer-events: none;
 
         filter:
                 // drop-shadow(0px 0px 75.6cqw #FFFFFF)
@@ -204,6 +207,7 @@ header.appHeader {
 
     .patch {
       @extend %flexCenter;
+      @extend %notSelectable;
       $extraWidth: 50%;
       --angle: -3.407deg;
 

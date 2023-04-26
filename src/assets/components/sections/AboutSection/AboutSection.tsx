@@ -4,6 +4,7 @@ import { FC, ReactNode } from 'react';
 import UiGrid from '@components/UiGrid/UiGrid';
 
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
+import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 
 import lockImg from '@media/icons/lock-icon.svg';
 import networkImg from '@media/icons/network-cion.svg';
@@ -28,6 +29,10 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
 	return (
 		<UiGrid.Section gap={0} className={cn(styles.about)}>
 			<div className={cn(styles.imageBlock)}>
+				<MediaWidthView maxWidth={1212}>
+					<h2>О КОМПАНИИ</h2>
+				</MediaWidthView>
+
 				<ProgressiveImage
 					src={aboutImg}
 					loaderColorScheme={{
