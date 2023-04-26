@@ -18,6 +18,8 @@
 
   h2 {
     @extend %secondaryFont;
+    @extend %medium;
+
     font-size: 3.2em;
     color: white;
     grid-column: span 12;

@@ -1,6 +1,15 @@
+import cn from 'classnames';
 import { motion } from 'framer-motion';
-import { FC, PropsWithChildren, useRef } from 'react';
+import {
+	FC,
+	PropsWithChildren,
+	ReactNode,
+	useLayoutEffect,
+	useRef,
+	useState,
+} from 'react';
 
+import styles from './DragMenu.module.scss';
 import { DragMenuProps } from './DragMenu.props';
 
 const DragMenu: FC<PropsWithChildren<DragMenuProps>> = ({
@@ -8,10 +17,13 @@ const DragMenu: FC<PropsWithChildren<DragMenuProps>> = ({
 	classNames,
 	axis,
 }) => {
-	const constraintRef = useRef(null);
+	const constraintRef = useRef<HTMLDivElement | null>(null);
 
 	return (
-		<motion.div ref={constraintRef} className={classNames?.constraint}>
+		<motion.div
+			ref={constraintRef}
+			className={cn(classNames?.constraint, styles.dragElement)}
+		>
 			<motion.div
 				drag={axis}
 				dragConstraints={constraintRef}

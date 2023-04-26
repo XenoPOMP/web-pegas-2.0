@@ -1,0 +1,115 @@
+@import "src/assets/styles/templates";
+
+.example {
+  margin-top: 10.26vw;
+  margin-bottom: 14.22vw;
+  font-size: 24px;
+
+  .textBlock {
+    @extend %secondaryFont;
+    grid-column: span 4;
+    color: white;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      @extend %medium;
+      font-size: 2.66em;
+    }
+
+    .subTitleText {
+      font-size: 1em;
+      margin: 1.625em 0 2.46em 0;
+    }
+
+    .portfolioButton {
+      @extend %notSelectable;
+
+      font-size: 1.33em;
+      padding: .65625em .78125em;
+      border-radius: .46875em;
+      background: black;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  .slideGroup {
+    @extend %notSelectable;
+
+    grid-column: span 8;
+    width: 100%;
+    min-height: 100%;
+    clip-path: inset( -100vw -100vw -100vw 0 );
+
+    .draggable {
+      font-size: 1em;
+      color: white;
+      height: 100%;
+      display: flex;
+      column-gap: globalPadding(0.5);
+      container-type: inline-size;
+      width: 100%;
+
+      .card {
+        @extend %primaryFont;
+
+        width: 50cqw;
+        height: 100%;
+        font-size: 1em;
+        padding: 1.5em 1.417em;
+        border-radius: .96em;
+        display: grid;
+        grid-row-gap: 1.701em;
+        aspect-ratio: 541 / 654;
+        position: relative;
+        z-index: -1;
+
+        .imagePlaceholder {
+          @extend %flexCenter;
+
+          height: 15.9em;
+
+          &:has(> img) {
+            align-items: end;
+          }
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            pointer-events: none;
+          }
+        }
+
+        .text {
+          font-size: 1.417em; // 1em = 34px
+
+          h3 {
+            @extend %regular;
+            @extend %flexCenter;
+
+            font-size: 1.059em;
+            width: 100%;
+            text-align: center;
+          }
+
+          .seeButton {
+            margin-top: 2.26em;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1920px) {
+      .draggable {
+        width: 100%;
+
+        .card {
+          width: 50cqw;
+        }
+      }
+    }
+  }
+}
