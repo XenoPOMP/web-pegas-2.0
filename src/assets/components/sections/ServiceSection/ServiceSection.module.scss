@@ -2,23 +2,60 @@
 
 .service {
   font-size: 20px;
+  margin-bottom: 9.11vw;
+
+  @media (max-width: 1017px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 686px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 492px) {
+    font-size: 15px;
+  }
 
   h2 {
     @extend %secondaryFont;
     font-size: 3.2em;
     color: white;
     grid-column: span 12;
-    margin-bottom: 1.72em;
+    // margin-bottom: 1.72em;
+    margin-bottom: 5.73vw;
   }
 
   .services {
     grid-column: span 12;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    row-gap: 6.45em;
+    // row-gap: 6.45em;
+    row-gap: 6.72vw;
 
     img {
       width: 100%;
+    }
+  }
+}
+
+.underServicePatch {
+  @extend %flexCenter;
+  @extend %secondaryFont;
+  @extend %regular;
+
+  width: 100%;
+  font-size: 48px;
+  justify-content: start;
+
+  img {
+    width: 100%;
+  }
+
+  .wordGroup {
+    .word {
+      font-size: 1em;
+      color: white;
     }
   }
 }
