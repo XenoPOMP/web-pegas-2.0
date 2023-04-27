@@ -1,0 +1,30 @@
+@import "src/assets/styles/templates";
+
+.solves {
+  margin-bottom: 8.85vw;
+  font-size: 20px;
+
+  h2 {
+    @extend %secondaryFont;
+    @extend %medium;
+
+    font-size: 3.2em;
+    color: white;
+    margin-bottom: 2.03125em;
+  }
+
+  .cardGroup {
+    .content {
+      grid-column-start: 2;
+      grid-column-end: 12;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 2.7em;
+
+      .card {
+        width: 100%;
+        aspect-ratio: 445 / 437;
+        background: red;
+      }
+    }
+  }
+}

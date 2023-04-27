@@ -10,18 +10,28 @@ const UiContainer: FC<IUiContainerNestedProps> & {
 	Section: FC<IUiContainerNestedProps>;
 	Article: FC<IUiContainerNestedProps>;
 	Header: FC<IUiContainerNestedProps>;
-} = ({ children, className }) => {
-	return <div className={cn(styles.container, className)}>{children}</div>;
+} = ({ children, className, id }) => {
+	return (
+		<div id={id} className={cn(styles.container, className)}>
+			{children}
+		</div>
+	);
 };
 
-UiContainer.Section = ({ children, className }) => (
-	<section className={cn(styles.container, className)}>{children}</section>
+UiContainer.Section = ({ children, className, id }) => (
+	<section id={id} className={cn(styles.container, className)}>
+		{children}
+	</section>
 );
-UiContainer.Article = ({ children, className }) => (
-	<article className={cn(styles.container, className)}>{children}</article>
+UiContainer.Article = ({ children, className, id }) => (
+	<article id={id} className={cn(styles.container, className)}>
+		{children}
+	</article>
 );
-UiContainer.Header = ({ children, className }) => (
-	<header className={cn(styles.container, className)}>{children}</header>
+UiContainer.Header = ({ children, className, id }) => (
+	<header id={id} className={cn(styles.container, className)}>
+		{children}
+	</header>
 );
 
 export default UiContainer;
