@@ -15,7 +15,7 @@ import type { ExampleSectionProps } from './ExampleSection.props';
 
 const ExampleSection: FC<ExampleSectionProps> = ({}) => {
 	return (
-		<UiGrid.Section className={cn(styles.example)}>
+		<UiGrid.Section id={'examples'} className={cn(styles.example)}>
 			<div className={cn(styles.textBlock)}>
 				<h2>Примеры наших работ</h2>
 

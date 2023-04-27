@@ -16,7 +16,7 @@ import type { ServiceSectionProps } from './ServiceSection.props';
 const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	return (
 		<>
-			<UiGrid.Section className={cn(styles.service)}>
+			<UiGrid.Section id={'services'} className={cn(styles.service)}>
 				<h2>Услуги</h2>
 
 				<div className={cn(styles.services)}>

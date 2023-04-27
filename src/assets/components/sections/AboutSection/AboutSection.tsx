@@ -27,7 +27,7 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
 	};
 
 	return (
-		<UiGrid.Section gap={0} className={cn(styles.about)}>
+		<UiGrid.Section id={'about'} gap={0} className={cn(styles.about)}>
 			<div className={cn(styles.imageBlock)}>
 				<MediaWidthView maxWidth={1212}>
 					<h2>О КОМПАНИИ</h2>
