@@ -5,6 +5,31 @@
   margin-bottom: 14.22vw;
   font-size: 24px;
 
+  @media (max-width: 1525px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 1274px) {
+    grid-template-columns: 1fr !important;
+    row-gap: 3em;
+
+    .textBlock, .slideGroup {
+      grid-column: span 1;
+    }
+
+    .slideGroup {
+      clip-path: unset;
+    }
+  }
+
+  @media (max-width: 972px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 664px) {
+    font-size: 16px;
+  }
+
   .textBlock {
     @extend %secondaryFont;
     grid-column: span 4;
@@ -102,9 +127,29 @@
       }
     }
 
-    @media (max-width: 1920px) {
+    @media (max-width: 1550px) {
+      .draggable {
+        width: 150%;
+
+        .card {
+          width: 60cqw;
+        }
+      }
+    }
+
+    @media (max-width: 1274px) {
       .draggable {
         width: 100%;
+
+        .card {
+          width: 50cqw;
+        }
+      }
+    }
+
+    @media (max-width: 824px) {
+      .draggable {
+        width: 150%;
 
         .card {
           width: 50cqw;
