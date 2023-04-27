@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FC } from 'react';
 
 import NavbarItem from '@ui/Navbar/NavbarItem/NavbarItem';
+import RawNavbar from '@ui/RawNavbar/RawNavbar';
 
 import useBoolean from '@hooks/useBoolean';
 
@@ -39,11 +40,7 @@ const BurgerNavbar: FC<BurgerNavbarProps> = ({}) => {
 				className={cn(styles.menuPlaceholder)}
 			>
 				<div className={cn(styles.menu)}>
-					<NavbarItem href={'/'}>О компании</NavbarItem>
-					<NavbarItem href={'/'}>Услуги</NavbarItem>
-					<NavbarItem href={'/'}>Примеры работ</NavbarItem>
-					<NavbarItem href={'/'}>Продукты</NavbarItem>
-					<NavbarItem href={'/'}>Ответы на вопросы</NavbarItem>
+					<RawNavbar />
 				</div>
 			</motion.div>
 		</div>
