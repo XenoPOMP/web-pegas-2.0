@@ -17,13 +17,98 @@
     .content {
       grid-column-start: 2;
       grid-column-end: 12;
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 2.7em;
+      container-type: inline-size;
+      position: relative;
+      z-index: 3;
 
       .card {
+        @extend %primaryFont;
+        @extend %regular;
+        @extend %flexCenter;
+
+        --border-width: .55em;
+        --gradient-angle: -90deg;
+
         width: 100%;
         aspect-ratio: 445 / 437;
-        background: red;
+        position: relative;
+        z-index: 2;
+        padding: .95em;
+        color: white;
+        align-items: start;
+
+        border: var(--border-width) solid transparent;
+        border-image-source: linear-gradient(var(--gradient-angle), #03304F 0%, rgba(0, 0, 0, 0) 62.47%);
+        -moz-border-image: -moz-linear-gradient(var(--gradient-angle), #03304F 0%, rgba(0, 0, 0, 0) 62.47%);
+        -webkit-border-image: -webkit-linear-gradient(var(--gradient-angle), #03304F 0%, rgba(0, 0, 0, 0) 62.47%);
+        border-image-slice: 1;
+        border-image-repeat: round;
+
+        .container {
+          @extend %flexCenter;
+
+          width: 100%;
+          height: 62.47%;
+          background: red;
+          flex-direction: column;
+          justify-content: start;
+
+          h3 {
+            @extend %semiBold;
+            font-size: 1.6em;
+            text-transform: uppercase;
+
+            .text {}
+          }
+        }
+
+        &.reversed {
+          align-items: end;
+
+          --gradient-angle: 90deg;
+
+          .container {
+            justify-content: end;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1664px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1604px) {
+    .cardGroup {
+      .content {
+        grid-column-start: 1;
+        grid-column-end: 13;
+      }
+    }
+  }
+
+  @media (max-width: 1380px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1270px) {
+    .cardGroup {
+      .content {
+        grid-template-columns: repeat(4, 1fr);
+
+        .card {
+          grid-column: span 2;
+
+          &.reversed {
+            grid-column-start: 2;
+            grid-row-start: 2;
+            grid-column: span 2;
+          }
+        }
       }
     }
   }
