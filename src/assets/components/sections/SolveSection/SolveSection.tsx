@@ -4,6 +4,8 @@ import { FC } from 'react';
 import UiContainer from '@components/UiContainer/UiContainer';
 import UiGrid from '@components/UiGrid/UiGrid';
 
+import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
+
 import styles from './SolveSection.module.scss';
 import type { SolveSectionProps } from './SolveSection.props';
 
@@ -25,6 +27,7 @@ const SolveSection: FC<SolveSectionProps> = ({}) => {
 							</div>
 						</div>
 					</div>
+
 					<div className={cn(styles.card, styles.reversed)}>
 						<div className={cn(styles.container)}>
 							<h3>Решение</h3>
@@ -37,6 +40,7 @@ const SolveSection: FC<SolveSectionProps> = ({}) => {
 							</div>
 						</div>
 					</div>
+
 					<div className={cn(styles.card)}>
 						<div className={cn(styles.container)}>
 							<h3>Результат</h3>
